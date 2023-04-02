@@ -8,9 +8,11 @@ Gem::Specification.new do |spec|
   spec.authors = ["Can Eldem"]
   spec.email = ["eldemcan@users.noreply.github.com"]
 
-  spec.summary = "Write a short summary, because RubyGems requires one."
-  spec.description = "Write a longer description or delete this line."
-  spec.homepage = "https://example.com"
+  spec.summary =
+    "A Ruby gem for sliding window rate limiting using Redis as the database."
+  spec.description =
+    "SpeedCheck provides a simple way to limit the number of requests or actions performed by a user or IP address within a certain time period."
+  spec.homepage = "https://github.com/eldemcan/speed_check"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
@@ -18,9 +20,9 @@ Gem::Specification.new do |spec|
     "allowed_push_host"
   ] = "Set to your gem server 'https://example.com'"
 
-  spec.metadata["homepage_uri"] = "https://example.com"
-  spec.metadata["source_code_uri"] = "https://example.com"
-  spec.metadata["changelog_uri"] = "https://example.com"
+  spec.metadata["homepage_uri"] = "https://github.com/eldemcan/speed_check"
+  spec.metadata["source_code_uri"] = "https://github.com/eldemcan/speed_check"
+  spec.metadata["changelog_uri"] = "https://github.com/eldemcan/speed_check"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
