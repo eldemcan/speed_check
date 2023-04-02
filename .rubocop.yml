@@ -1,4 +1,5 @@
 AllCops:
+  NewCops: enable
   TargetRubyVersion: 2.6
 
 Style/StringLiterals:
@@ -9,5 +10,26 @@ Style/StringLiteralsInInterpolation:
   Enabled: true
   EnforcedStyle: double_quotes
 
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: false
+
 Layout/LineLength:
   Max: 120
+
+Style/TrailingCommaInArguments:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false

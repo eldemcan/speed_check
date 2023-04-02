@@ -1,8 +1,8 @@
 # SpeedCheck
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/speed_check`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+SpeedCheck is a Ruby gem that provides a simple way to implement sliding window rate limiting using Redis as the database. With SpeedCheck, you can easily limit the number of requests or actions performed by a user or IP address within a certain time period, such as 10 requests per minute.
+
 
 ## Installation
 
@@ -22,7 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+First, you'll need to create a Redis client to use with SpeedCheck:
+
+```ruby
+redis = Redis.new(host: "127.0.0.1", port: 6380, db: 15)
+```
+
+Next, create a limiter object using the Redis client:
+
+```ruby
+limit = SpeedCheck::Limiter.new(client: redis)
+```
+
+To limit requests or actions for a specific identifier (e.g. user ID, IP address), use the window method with the identifier and limit value:
+
+```ruby
+limit.window("some_identifier", 10) do
+  # your code here
+end
+```
+
+This will limit the number of requests or actions performed by "some_identifier" to 10 within a one-minute sliding window. If the limit is exceeded, an exception SpeedCheck::LimitExceeded will be raised.
 
 ## Development
 

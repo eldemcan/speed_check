@@ -1,4 +1,12 @@
 module SpeedCheck
   VERSION: String
+
   # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+  class Limiter
+    attr_accessor expire: Integer
+    attr_accessor client: Redis
+
+    def initialize: (opts: Hash) -> void
+    def window(identifier: String, capacity_per_minute: Integer) -> void
+  end
 end
