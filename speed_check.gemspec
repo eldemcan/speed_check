@@ -16,10 +16,6 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
-  spec.metadata[
-    "allowed_push_host"
-  ] = "Set to your gem server 'https://example.com'"
-
   spec.metadata["homepage_uri"] = "https://github.com/eldemcan/speed_check"
   spec.metadata["source_code_uri"] = "https://github.com/eldemcan/speed_check"
   spec.metadata["changelog_uri"] = "https://github.com/eldemcan/speed_check"
